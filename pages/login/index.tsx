@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { LabelInput, Button, Banner, Typography } from '../../components'
-import Styled from './styles'
-import { validateEmail } from './functions'
+import Styled from '../../components/login/styles'
+import { validateEmail } from '../../components/login/functions'
 import axios from 'axios'
 
 type FieldProps = {
