@@ -20,7 +20,9 @@ const LabelInput = (props: LabelInputProps) => {
     return (
         <Styled.Container type={error && 'error'} htmlFor={name}>
             <Styled.Label>{title}</Styled.Label>
-            <Styled.Input id={name} {...props} />
+            <Styled.InputContainer>
+                <Styled.Input id={name} {...props} />
+            </Styled.InputContainer>
             {error && <Styled.Error>{error}</Styled.Error>}
         </Styled.Container>
     )

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import variables from '../../config/consts'
 
 export const StyledButton = styled.button `
     font-family: Montserrat;
@@ -7,7 +8,7 @@ export const StyledButton = styled.button `
     font-weight: 600;
     line-height: 20px;
     letter-spacing: 0em;
-    color: #FFFFFF;
+    color: ${variables.WHITE_COLOR};
     text-transform: uppercase;
     text-align: left;
     background: linear-gradient(267.79deg, #383E71 0%, #9D25B0 99.18%);

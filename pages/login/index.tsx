@@ -52,20 +52,32 @@ const Login = () => {
             return
         }
 
-        axios.get('https://60340e30843b150017932168.mockapi.io/api/wiser-users/users', {
-            params: {
-                email: email.field,
-                password: password.field
-            }
-        })
-        .then((result) => {
-            console.log(result)
-        })
-        .catch((e) => {
-            console.warn(e)
-        })
-
-        console.log(email, password)
+        // fetch('/api/auth', {
+        //     method: 'POST',
+        //     headers: {
+        //       'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify({
+        //       email,
+        //       password,
+        //     }),
+        //   })
+        //     .then((r) => {
+        //       return r.json();
+        //     })
+        //     .then((data) => {
+        //       if (data && data.error) {
+        //           console.log(data)
+        //         // setLoginError(data.message);
+        //       }
+        //       if (data && data.token) {
+        //         //set cookie
+        //         console.log(data)
+        //         // cookie.set('token', data.token, {expires: 2});
+        //         // Router.push('/');
+        //       }
+        //     });
+        // console.log(email, password)
     }
 
     return (
