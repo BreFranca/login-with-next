@@ -1,4 +1,12 @@
-import '../styles/globals.css';
-import App from 'next/app';
+import { Provider } from 'next-auth/client'
+import '../styles/globals.css'
 
-export default App;
+const App = ({ Component, pageProps }) => {
+  return (
+    // <Provider session={pageProps.session}>
+      <Component {...pageProps} />
+    // </Provider>
+  )
+}
+
+export default App

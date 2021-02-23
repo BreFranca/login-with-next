@@ -1,25 +1,28 @@
 import React from 'react'
+import Styled from './styles'
 
-interface LabelInputProps {
+type LabelInputProps = {
     name: string
-    onChange: (e: any) => void
+    onChange?: (e: any) => void
     title?: string
     type: string
     placeholder?: string
-    value: string
+    error?: string
 }
 
 const LabelInput = (props: LabelInputProps) => {
     const {
         name,
-        title
+        title,
+        error
     } = props
 
     return (
-        <label htmlFor={name}>
-            {title}
-            <input {...props} />
-        </label>
+        <Styled.Container type={error && 'error'} htmlFor={name}>
+            <Styled.Label>{title}</Styled.Label>
+            <Styled.Input id={name} {...props} />
+            {error && <Styled.Error>{error}</Styled.Error>}
+        </Styled.Container>
     )
 }
 

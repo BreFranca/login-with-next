@@ -1,6 +1,7 @@
 import React from 'react'
+import { StyledButton } from './styles'
 
-interface ButtonProps {
+type ButtonProps = {
     children: any
     name?: string
     htmlType?: string
@@ -12,7 +13,7 @@ const Button = (props: ButtonProps) => {
     } = props
 
     return (
-        <button {...props}>{children}</button>
+        <StyledButton {...props}>{children}</StyledButton>
     )
 }
 
